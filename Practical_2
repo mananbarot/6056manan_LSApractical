@@ -1,0 +1,26 @@
+Practical_2
+
+Initial settings: Add a User, Network Settings, Configure Services, display the list of services which are running, Stop and turn OFF auto-start setting for a service if you don’t need it, Sudo Settings
+
+Add a User in kali linux
+Cmd :- adduser username
+Network Setting In Kali Linux
+IP Address
+Cmd:- sudo ifconfig -a
+IP address and Netmask Network Configuration
+Cmd:- sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
+Configure Services In Kali Linux
+Cmd :- service ssh start
+Cmd :- ssh username@hostname
+Basic Command To Run , Enable , Start and Stop Services
+Cmd :- systemctl [command] [service_name]
+To stop and restart the service in Linux, use the command:
+Cmd :- sudo systemctl restart SERVICE_NAME
+Cmd :- sudo systemctl stop SERVICE_NAME
+To Enable Services At Boot
+Cmd :- sudo systemctl enable SERVICE_NAME
+To display the list of services which are running In Kali Linux
+Cmd :- sudo systemctl -t=service --state=running
+Sudo settings
+Cmd :- sudo apt install -y software_name
+Any Command Which Are Used With Sudo Give A User A Super User Previliges.
