@@ -1,0 +1,16 @@
+Configure SSH server to manage a server from the remote computer....
+
+ 1) Secure Shell, sometimes referred to as Secure Socket Shell, is a protocol which allows you to connect securely to a remote computer or a server by using a text-based interface.
+ 2) When a secure SSH connection is established, a shell session will be started, and you will be able to manipulate the server by typing commands within the client on your local computer.
+
+ Commands : 
+	>> ssh
+	>> sudo apt-get install openssh-server
+	>> sudo systemctl status ssh
+	>> sudo systemctl start ssh
+	>> ssh localhost
+        >> sudo apt-get install ufw
+        >> sudo systemctl start ufw
+        >> sudo systemctl status ufw
+        >> sudo ufw allow ssh
+        >> ssh 127.0.0.1
