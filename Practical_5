@@ -1,0 +1,42 @@
+Practical 5
+Install Samba to share folder or files between Windows and Linux.
+steps
+
+
+Theory:The Samba server can be defined as one of the most powerful server in Linux that enables us to 
+        connect various resources like printers and files with several 	operating systems
+
+
+Step-1. Install the samba package
+cmd     sudo apt-get update
+        sudo apt-get install samba
+
+Step-2. Create a directory for it to share
+cmd     mkdir /home/manan/share/
+        Created two files to test
+
+Step-3.The configuration file. Have to add the directory we want to share.
+cmd    sudo nano /etc/samba/smb.conf
+  
+Step-4.Add this to the end of the file.
+  [Share]
+      comment = Samba on Ubuntu
+      path = /home/username/share
+      read only = no
+      browsable = yes
+
+Step-5.Start/Restart the samba service
+cmd    sudo service smbd restart
+
+Step-6.Allow samba through the firewall
+cmd    sudo ufw allow samba
+
+Step-7.Setting up User Account and Configuring Password
+cmd    sudo smbpasswd -a manan
+
+  Note: Username must belong to a system account.
+
+Step-8.Open the file explorer and type 
+syntax smb://<ip-address>/<shared_file>
+
+cmd    smb://127.0.0.1/abc
