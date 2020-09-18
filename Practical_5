@@ -21,7 +21,7 @@ cmd    sudo nano /etc/samba/smb.conf
 Step-4.Add this to the end of the file.
   [Share]
       comment = Samba on Ubuntu
-      path = /home/username/share
+      path = /home/manan/share
       read only = no
       browsable = yes
 
